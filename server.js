@@ -1,4 +1,4 @@
-// written by vivek kumar
+// written by vivek
 var express = require('express');
 var mysql = require('mysql'); // include the module mysql
 var app = express();
