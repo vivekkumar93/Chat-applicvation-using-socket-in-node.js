@@ -1,0 +1,73 @@
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+</style>
+
+<div id="fb-root" class="content">
+
+</div>
+
+<DIV class="container">
+  <h1>Reverse Chat Application</h1>
+</DIV>
+
+        <script>
+        window.fbAsyncInit = function() {
+                FB.init({
+                appId: '271680276992348',// I have checked it using my app id
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+        };
+
+        // Load the SDK asynchronously
+        (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+        function login() {
+            FB.login(function(response) {
+
+            // handle the response
+			console.log(response)
+			<!-- window.location.href = '/'; -->
+
+            }, {scope: ''});            
+        }
+
+        function logout() {
+            FB.logout(function(response) {
+              // user is now logged out
+            });
+        }
+
+        var status = FB.getLoginStatus();
+
+        console.log(status);
+
+        </script>
+
+        <button class="button" onclick="javascript:login();">Login via Facebook</button>
+
+        <!--
+		
+		<br>
+
+        <button onclick="javascript:logout();">Logout via Facebook</button>
+		
+		-->
