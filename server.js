@@ -1,3 +1,4 @@
+// written by vivek kumar
 var express = require('express');
 var mysql = require('mysql'); // include the module mysql
 var app = express();
@@ -21,4 +22,3 @@ res.json(result);
 
 app.listen(3000);
 console.log('—– server is listening —–');
-
